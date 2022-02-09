@@ -2,8 +2,8 @@
 Description=ngrok
 After=network.target
 
-[Service]
-ExecStart=/opt/ngrok/ngrok start --all --config /opt/ngrok/ngrok.yml
+[Service] 
+ExecStart=/snap/bin/ngrok start torch --config /home/ryan/.ngrok2/ngrok.yml -log=stdout > $HOME/ngrok.log &
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 IgnoreSIGPIPE=true
