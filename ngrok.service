@@ -2,14 +2,12 @@
 Description=ngrok
 After=network.target
 
-[Service] 
-ExecStart=/snap/bin/ngrok start torch --config /home/ryan/.ngrok2/ngrok.yml -log=stdout > $HOME/ngrok.log &
-ExecReload=/bin/kill -HUP $MAINPID
-KillMode=process
-IgnoreSIGPIPE=true
-Restart=always
-RestartSec=3
+[Service]
 Type=simple
+User=ryan
+ExecStart=/snap/bin/ngrok start --all --config /home/ryan/.ngrok2/ngrok.yml
+Restart=on-failure
+RestartSec=60
 
 [Install]
 WantedBy=multi-user.target
