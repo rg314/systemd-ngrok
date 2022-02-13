@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Type=simple
-User=ryan
-ExecStart=/snap/bin/ngrok start --all --config /home/ryan/.ngrok2/ngrok.yml
+User=user
+ExecStart=/snap/bin/ngrok start --all --config /home/user/.ngrok2/ngrok.yml
 Restart=on-failure
 RestartSec=60
 

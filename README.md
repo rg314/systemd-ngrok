@@ -1,8 +1,10 @@
 # Installation
 
-Step 1: Add `ngrok.service` to `/lib/systemd/system/`.
+Step 1: Add user name to line 7 and 8 in `ngrok.service`
 
-Step 2: Start ngrok service by typing:
+Step 2: Add `ngrok.service` to `/lib/systemd/system/`.
+
+Step 3: Start ngrok service by typing:
 
 ```
 sudo systemctl stop ngrok.service
